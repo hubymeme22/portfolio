@@ -1,0 +1,17 @@
+import BigHeader from "../../components/Texts/BigHeader";
+import BigHeaderSubtitle from "../../components/Texts/BigHeaderSubtitle";
+import FlexBox from "../../components/FlexBox";
+
+const Landing: React.FC = () => {
+  return (
+    <FlexBox height="100%" justifyContent="center">
+      <BigHeader label="Backend Developer" align="center" />
+      <BigHeaderSubtitle
+        label="Specializing in security implementation, optimization, API development, and problem solving "
+        align="center"
+      />
+    </FlexBox>
+  );
+};
+
+export default Landing;

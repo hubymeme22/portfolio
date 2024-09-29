@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("./animations.css");
+
+:root {
+  --secondary-light-faded: #6060608a;
+  --secondary-light: #606060;
+  --secondary-accordion-border-light: #4d4d4d;
+  --shadow-light: #c8c8c8;
+}
+
+* {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14pt;
+}
+
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 0.5em;
+  display: grid;
+  background-color: white;
+  grid-template-columns: 40% 60%;
+}
+
+footer {
+  position: absolute;
+  height: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+}
+
+a {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14pt;
+
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
+* CSS for MenuButton
+*/
+
+.menuButton {
+  cursor: pointer;
+  position: relative;
+}
+
+.menuButton::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  transition: 0.2s;
+}
+
+.menuButton:hover:after {
+  width: 100%;
+}
+
+.menuButtonActive::after {
+  width: 100%;
+}
+
+.nextButton {
+  border: none;
+}
+
+/*
+* CSS for main header and subheader components
+*/
+.bigHeader {
+  font-weight: bold;
+  font-family: "Roboto Condensed", "Helvetica", "Arial", sans-serif;
+  font-size: 120pt;
+  margin: 0;
+  animation: fadeInHeader 1s forwards;
+}
+
+.subtitleHeader {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14pt;
+  margin: 0;
+  animation: fadeInHeader 1s forwards;
+}
+
+/*
+* CSS For divider component
+*/
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+  animation: expandHr 1s forwards;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 2px solid var(--secondary-light);
+}
+
+.divider-text {
+  padding: 0 1vh;
+  color: 1px solid var(--secondary-light);
+  white-space: nowrap;
+  font-family: "Roboto Condensed", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+}
