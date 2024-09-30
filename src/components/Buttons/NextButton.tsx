@@ -14,6 +14,7 @@ const NextButton: React.FC<NextButtonProps> = ({ onClick, hidden }) => {
         borderRadius: "10px",
         padding: "1em",
         color: "white",
+        zIndex: 2,
         ":hover": {
           bgcolor: "var(--secondary-light)",
         },

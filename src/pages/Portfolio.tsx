@@ -5,6 +5,7 @@ import PrevButton from "../components/Buttons/PrevButton";
 import About from "./PortfolioSections/About";
 import { PortfolioProps } from "../interfaces/props";
 import Experience from "./PortfolioSections/Experience";
+import Projects from "./PortfolioSections/Projects";
 
 const Portfolio: React.FC<PortfolioProps> = ({
   page,
@@ -31,6 +32,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
       {page === 0 && <Landing />}
       {page === 1 && <About />}
       {page === 2 && <Experience />}
+      {page === 3 && <Projects />}
     </Box>
   );
 };
