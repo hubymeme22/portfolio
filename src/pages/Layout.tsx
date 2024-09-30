@@ -1,9 +1,11 @@
-import { Box } from "@mui/material";
-import MenuButton from "../components/Buttons/MenuButton";
+import { Box, useMediaQuery } from "@mui/material";
 import Portfolio from "./Portfolio";
 import Header from "./templates/Header";
 import { useEffect, useState } from "react";
 import PageInstruct from "../components/Texts/PageInstruct";
+import Footer from "./templates/Footer";
+import BigHeaderSubtitle from "../components/Texts/BigHeaderSubtitle";
+import FlexBox from "../components/FlexBox";
 
 const PAGE_LAST = 2;
 const PAGES_WITH_SCROLL_DISABLED = [2, 3];
@@ -11,6 +13,7 @@ const PAGES_WITH_SCROLL_DISABLED = [2, 3];
 const Layout: React.FC = () => {
   const [page, setPage] = useState(0);
   const [scrollDirection, setScrollDirection] = useState(0);
+  const desktopMedia = useMediaQuery("(min-width:1468px)");
 
   const checkScrollDisabled = () => {
     return PAGES_WITH_SCROLL_DISABLED.includes(page);
@@ -48,52 +51,30 @@ const Layout: React.FC = () => {
         left: 0,
       }}
     >
-      <Header page={page} setPage={setPage} />
-      <PageInstruct
-        hidden={page !== 0}
-        text="[ << Scroll me to change page >> ]"
-      />
-      <Portfolio
-        page={page}
-        scrollDisabled={checkScrollDisabled()}
-        setPage={setPage}
-      />
-      <footer>
-        <Box
-          width="96%"
-          paddingTop="0.5em"
-          paddingBottom="0.5em"
-          borderTop="1px solid var(--secondary-light)"
-          display="flex"
-          justifyContent="space-between"
+      {desktopMedia ? (
+        <>
+          <Header page={page} setPage={setPage} />
+          <PageInstruct
+            hidden={page !== 0}
+            text="[ << Scroll me to change page >> ]"
+          />
+          <Portfolio
+            page={page}
+            scrollDisabled={checkScrollDisabled()}
+            setPage={setPage}
+          />
+        </>
+      ) : (
+        <FlexBox
+          height="100vh"
+          width="100%"
+          alignItems="center"
+          justifyContent="center"
         >
-          <Box sx={{ fontSize: "11pt" }}>
-            HueHueberry © 2024 | Coded with raw React+TS
-          </Box>
-          <Box display="flex" gap="2em" justifyContent="flex-end">
-            <MenuButton
-              to="https://linkedin.com/in/huehueberry/"
-              label="LinkedIn"
-              style={{ fontSize: "11pt" }}
-            />
-            <MenuButton
-              to="https://www.facebook.com/hubert.espinola.10"
-              label="Facebook"
-              style={{ fontSize: "11pt" }}
-            />
-            <MenuButton
-              to="https://x.com/thekrazyuno"
-              label="Twitter (X)"
-              style={{ fontSize: "11pt" }}
-            />
-            <MenuButton
-              to="https://www.instagram.com/huehueberry/"
-              label="Instagram"
-              style={{ fontSize: "11pt" }}
-            />
-          </Box>
-        </Box>
-      </footer>
+          <BigHeaderSubtitle label="Mobile experience is currently not supported :((" />
+        </FlexBox>
+      )}
+      <Footer />
     </Box>
   );
 };

@@ -1,14 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
-import Portfolio from "./pages/Portfolio";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Portfolio />} />
-        </Route>
+        <Route path="/" element={<Layout />} />
       </Routes>
     </BrowserRouter>
   );
