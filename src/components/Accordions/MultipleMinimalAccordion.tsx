@@ -16,7 +16,10 @@ const MultipleMinimalAccordion: React.FC<{ data: MinimalAccordionProps[] }> = ({
               content={accordionData.content}
               imageSlide={accordionData.imageSlide}
               textContent={accordionData.textContent}
-              style={{ animation: `fadeIn ${0.5 + id * 0.4}s forwards` }}
+              style={{
+                opacity: 0,
+                animation: `fadeInFromRight ${0.5 + id * 0.5}s forwards`,
+              }}
             />
           );
         })

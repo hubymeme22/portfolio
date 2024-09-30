@@ -201,13 +201,49 @@ const Experience: React.FC = () => {
             {
               title: "TryHackMe",
               subtitle: "CTF Challenges mostly related on web exploitation",
-              textContent: "",
+              imageSlide: ["/thm1.png", "/thm2.png"],
+              textContent:
+                "In my free time, I sometimes spend my time solving CTF challenges which mostly were web exploitation. Most of the rooms I solved were vulnerabilities related to different injection techniques such as sqli, phpi, xss, etc.--others related to weak encryption such as AES-CBC, and some misconfiguration problems for the OG lfi and rfi.",
+              content: (
+                <RepeatingContent
+                  title="Tools & Learnings"
+                  chipList={[
+                    {
+                      bgcolor: "purple",
+                      color: "white",
+                      label: "Web Exploitation",
+                    },
+                    { bgcolor: "#12664f", color: "white", label: "Encryption" },
+                    { bgcolor: "#13a7ad", color: "white", label: "Burpsuite" },
+                    { bgcolor: "#76afc6", color: "white", label: "Nmap" },
+                  ]}
+                />
+              ),
             },
             {
               title: "Technofusion",
               subtitle: "CTF Challenges mostly related on web exploitation",
               textContent:
                 "Compete with different IT and CS students in the college department. I represented our faction and won first place, solving most of the problems which revolved around dynamic programming problems.",
+              imageSlide: ["/technofusion.png"],
+              content: (
+                <RepeatingContent
+                  title="Language & Learnings"
+                  chipList={[
+                    {
+                      bgcolor: "purple",
+                      color: "white",
+                      label: "Data Structures",
+                    },
+                    { bgcolor: "#12664f", color: "white", label: "Algorithms" },
+                    {
+                      bgcolor: "#ddb100",
+                      color: "white",
+                      label: "Python",
+                    },
+                  ]}
+                />
+              ),
             },
           ]}
         />

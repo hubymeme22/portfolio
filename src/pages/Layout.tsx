@@ -3,6 +3,7 @@ import MenuButton from "../components/Buttons/MenuButton";
 import Portfolio from "./Portfolio";
 import Header from "./templates/Header";
 import { useEffect, useState } from "react";
+import PageInstruct from "../components/Texts/PageInstruct";
 
 const PAGE_LAST = 2;
 const PAGES_WITH_SCROLL_DISABLED = [2, 3];
@@ -48,6 +49,10 @@ const Layout: React.FC = () => {
       }}
     >
       <Header page={page} setPage={setPage} />
+      <PageInstruct
+        hidden={page !== 0}
+        text="[ << Scroll me to change page >> ]"
+      />
       <Portfolio
         page={page}
         scrollDisabled={checkScrollDisabled()}

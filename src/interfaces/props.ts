@@ -4,6 +4,7 @@ import React from "react";
 export interface BigHeaderProps {
   label: string;
   align?: "center" | "left" | "right";
+  style?: any;
 }
 
 export interface MenuButtonProps {
