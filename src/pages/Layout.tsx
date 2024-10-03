@@ -54,10 +54,7 @@ const Layout: React.FC = () => {
       {desktopMedia ? (
         <>
           <Header page={page} setPage={setPage} />
-          <PageInstruct
-            hidden={page !== 0}
-            text="[ << Scroll me to change page >> ]"
-          />
+          <PageInstruct hidden={page !== 0} text="[ Scroll me ]" />
           <Portfolio
             page={page}
             scrollDisabled={checkScrollDisabled()}

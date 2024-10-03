@@ -6,6 +6,7 @@ import About from "./PortfolioSections/About";
 import { PortfolioProps } from "../interfaces/props";
 import Experience from "./PortfolioSections/Experience";
 import Projects from "./PortfolioSections/Projects";
+import ContactMe from "./PortfolioSections/ContactMe";
 
 const Portfolio: React.FC<PortfolioProps> = ({
   page,
@@ -33,6 +34,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
       {page === 1 && <About />}
       {page === 2 && <Experience />}
       {page === 3 && <Projects />}
+      {page === 4 && <ContactMe />}
     </Box>
   );
 };
