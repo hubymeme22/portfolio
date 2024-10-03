@@ -33,6 +33,13 @@
   }
 }
 
+@keyframes projectCardAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-3vh);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

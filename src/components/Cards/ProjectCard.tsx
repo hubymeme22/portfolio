@@ -8,9 +8,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   githubLink,
   mergeReqLink,
+  style,
 }) => {
   return (
     <Box
+      style={style}
       sx={{
         height: "330px",
         width: "350px",

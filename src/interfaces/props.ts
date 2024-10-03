@@ -82,3 +82,8 @@ export interface ProjectCardProps {
   mergeReqLink?: string;
   style?: any;
 }
+
+export interface MultipleProjectCardsProps {
+  data: ProjectCardProps[];
+  enableTransitionEffect?: boolean;
+}
