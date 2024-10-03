@@ -171,6 +171,16 @@ const Projects: React.FC = () => {
             />
             <ProjectCard
               iconType="web"
+              title="BatStateU Tenants"
+              summaryContent="
+          A commissioned project by IE students, and was used to automate students from notification, calculation, and distribution
+          of payments for each tennants.
+          "
+              githubLink="https://github.com/hubymeme22"
+              mergeReqLink=""
+            />
+            <ProjectCard
+              iconType="web"
               title="OPCR Project"
               summaryContent="
           OPCR API backend or Office Performance Commitment Review (OPCR) is a project that can be used for recording,
@@ -186,16 +196,6 @@ const Projects: React.FC = () => {
               summaryContent="
           A web application created for authenticating alumni students in Batangas State University. This system also can offer
           different opportunities through its features for job, announcements, and news posting.
-          "
-              githubLink="https://github.com/hubymeme22"
-              mergeReqLink=""
-            />
-            <ProjectCard
-              iconType="web"
-              title="BatStateU Tenants"
-              summaryContent="
-          A commissioned project by IE students, and was used to automate students from notification, calculation, and distribution
-          of payments for tennants.
           "
               githubLink="https://github.com/hubymeme22"
               mergeReqLink=""
@@ -231,6 +231,16 @@ const Projects: React.FC = () => {
               summaryContent="
           A simple datastructure and algorithm concept to simplify a boolean tree. This simple algorithm I created simplifies boolean tree
           by triming the similar leaves, freeing space thus utlizing memory better.
+          "
+              githubLink="https://github.com/hubymeme22"
+              mergeReqLink=""
+            />
+            <ProjectCard
+              iconType="algo"
+              title="DroidCam Image Extractor"
+              summaryContent="
+          A simple project for extracting images from RTSP services such as droid cam. This project also served as a proof-of-concept
+          for utilizing network protocols in IRIS project.
           "
               githubLink="https://github.com/hubymeme22"
               mergeReqLink=""

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         justifyContent="space-between"
       >
         <Box sx={{ fontSize: "11pt" }}>
-          HueHueberry © 2024 | Coded with minmalistic design 👽
+          HueHueberry © 2024 | Coded with huehueberistic design 👽
         </Box>
         <Box display="flex" gap="2em" justifyContent="flex-end">
           <MenuButton

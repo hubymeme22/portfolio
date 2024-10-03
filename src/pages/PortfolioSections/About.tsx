@@ -26,25 +26,18 @@ const About: React.FC = () => {
             />
           </Box>
           <Box display="flex" textAlign="justify" alignItems="center">
-            Experienced Backend Developer with a strong background in building
-            and optimizing server-side applications and APIs. Skilled in various
-            programming languages and focused on performance and security.
-            Effective at working with teams to create reliable and efficient
-            solutions. Ready to contribute to exciting projects and enhance
-            technical operations.
+            Hi! I'm Hubert Espinola, a recent graduate with a BS in Computer
+            Science from Batangas State University. I'm a developer focused on
+            cybersecurity and API development. I've worked on various projects
+            that emphasize performance and security. Right now, I'm part of a
+            great team at CP Health Innovation, where I'm learning a lot.
             <br />
-            <br />I have a deep curiosity about the latest technological
-            advancements and cybersecurity trends. Staying informed about
-            emerging technologies and best practices in security allows me to
-            build robust applications that not only perform well but also
-            protect user data. I regularly engage with industry publications,
-            and forums to explore innovative solutions and enhance my
-            understanding of potential vulnerabilities, ensuring that I can
-            proactively address security challenges in every project I
-            undertake.
-            <br />
-            <br />
-            and also... I love physics
+            <br />I have a strong interest in new technology and cybersecurity
+            trends. I stay updated on the latest tools and practices to create
+            applications that work well and keep user data safe. I read industry
+            articles and join forums to find new ideas and understand possible
+            security issues, so I can tackle challenges in every project I work
+            on.
           </Box>
         </Box>
       </Box>

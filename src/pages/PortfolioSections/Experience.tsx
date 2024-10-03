@@ -79,7 +79,7 @@ const Experience: React.FC = () => {
               title: "CP Health Innovations",
               subtitle: "Cybersecurity Analyst (Jun 2024 - Present)",
               textContent:
-                "Currently a cybersecurity analyst responsible for performing vulnerability assessments on CareGo EMR—also responsible for providing patches and the development of security tools such as web application firewalls.",
+                "Currently, I'm a cybersecurity analyst focused on conducting vulnerability assessments for CareGo EMR. I also handle patch management and develop security tools, including web application firewalls.",
               content: (
                 <RepeatingContent
                   title="Tools & Techstack"
@@ -107,7 +107,7 @@ const Experience: React.FC = () => {
               title: "CP Health Innovations",
               subtitle: "Fullstack Developer (Nov 2024 - May 2024)",
               textContent:
-                "Responsible for development of web application features requested. Specifically, I was assigned on development of API endpoints, designing web ui by re-using the company's React components, and creation of new components as well.",
+                "I was responsible for developing web application features as requested. Specifically, I work on creating API endpoints, designing the web UI by reusing the company's React components, and building new components as needed.",
               content: (
                 <RepeatingContent
                   title="Tools & Techstack"
@@ -130,7 +130,7 @@ const Experience: React.FC = () => {
               title: "iSite x Stackleague",
               subtitle: "Regionals Programming competition - 4th place",
               textContent:
-                "One of the hand-picked students by the university to represent the school in the regional programming competition held on LPU Calamba Laguna. Solved programming problems mostly focusing on dynamic-algorithm problems.",
+                "I was one of the selected students by the university to represent our school in the regional programming competition at LPU Calamba, Laguna. During the competition, I solved various programming challenges, primarily focusing on dynamic algorithm problems.",
               imageSlide: ["/regionals1.jpg"],
               content: (
                 <RepeatingContent
@@ -166,7 +166,7 @@ const Experience: React.FC = () => {
               title: "iSite National",
               subtitle: "National Programming competition - 3rd place",
               textContent:
-                "Compete with different schools with harder problem set, solving different problems mostly revolving in mathematics, dynamic programming, and mutli-dimensional arrays.",
+                "I competed against various schools with challenging problem sets, focusing on mathematical problems, dynamic programming, and multi-dimensional arrays.",
               imageSlide: ["/nationals2.jpg", "/nationals1.jpg"],
               content: (
                 <RepeatingContent
@@ -203,7 +203,7 @@ const Experience: React.FC = () => {
               subtitle: "CTF Challenges mostly related on web exploitation",
               imageSlide: ["/thm1.png", "/thm2.png"],
               textContent:
-                "In my free time, I sometimes spend my time solving CTF challenges which mostly were web exploitation. Most of the rooms I solved were vulnerabilities related to different injection techniques such as sqli, phpi, xss, etc.--others related to weak encryption such as AES-CBC, and some misconfiguration problems for the OG lfi and rfi.",
+                "In my free time, I enjoy solving CTF challenges, particularly in web exploitation. Most of the challenges I tackle involve vulnerabilities related to various injection techniques like SQLi, PHPi, and XSS, as well as issues with weak encryption methods like AES-CBC and misconfigurations related to local and remote file inclusion.",
               content: (
                 <RepeatingContent
                   title="Tools & Learnings"
@@ -224,7 +224,7 @@ const Experience: React.FC = () => {
               title: "Technofusion",
               subtitle: "CTF Challenges mostly related on web exploitation",
               textContent:
-                "Compete with different IT and CS students in the college department. I represented our faction and won first place, solving most of the problems which revolved around dynamic programming problems.",
+                "I competed against other IT and CS students in our college department, representing my faction and winning first place. I solved a majority of the problems, which focused on dynamic programming challenges.",
               imageSlide: ["/technofusion.png"],
               content: (
                 <RepeatingContent
