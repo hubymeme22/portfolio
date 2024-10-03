@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import MenuButton from "../../components/Buttons/MenuButton";
 import { HeaderProps } from "../../interfaces/props";
+import ThemeToggle from "../../components/Buttons/ThemeToggle";
 
 const Header: React.FC<HeaderProps> = ({ page, setPage }) => {
   return (
@@ -46,7 +47,9 @@ const Header: React.FC<HeaderProps> = ({ page, setPage }) => {
           justifyContent="center"
           alignItems="center"
           gap="2em"
-        ></Box>
+        >
+          <ThemeToggle darkMode={false} onToggle={() => {}} />
+        </Box>
       </Box>
     </header>
   );

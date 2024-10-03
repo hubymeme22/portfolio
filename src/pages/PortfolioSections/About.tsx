@@ -30,7 +30,8 @@ const About: React.FC = () => {
             Science from Batangas State University. I'm a developer focused on
             cybersecurity and API development. I've worked on various projects
             that emphasize performance and security. Right now, I'm part of a
-            great team at CP Health Innovation, where I'm learning a lot.
+            great team at CP Health Innovation as a cybersecurity analyst, where
+            I'm learning a lot.
             <br />
             <br />I have a strong interest in new technology and cybersecurity
             trends. I stay updated on the latest tools and practices to create
