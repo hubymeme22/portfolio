@@ -52,7 +52,7 @@ const Experience: React.FC = () => {
       style={{ animation: "fadeIn 1s forwards" }}
     >
       <PageFiller heightFill="25vh" />
-      <SectionDivider text="Experiences" width="65%" />
+      <SectionDivider text="Experiences & Awards" width="65%" />
 
       <Typography
         color="var(--secondary-accordion-border-light)"
