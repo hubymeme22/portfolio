@@ -73,3 +73,12 @@ export interface ChipProps {
   bgcolor: string;
   color: string;
 }
+
+export interface ProjectCardProps {
+  iconType: "tool" | "web" | "algo";
+  title: string;
+  summaryContent: string;
+  githubLink?: string;
+  mergeReqLink?: string;
+  style?: any;
+}
