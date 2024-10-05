@@ -81,9 +81,11 @@ export interface ProjectCardProps {
   githubLink?: string;
   mergeReqLink?: string;
   style?: any;
+  isMobile?: boolean;
 }
 
 export interface MultipleProjectCardsProps {
   data: ProjectCardProps[];
   enableTransitionEffect?: boolean;
+  isMobile?: boolean;
 }

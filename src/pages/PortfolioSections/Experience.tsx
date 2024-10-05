@@ -4,6 +4,8 @@ import PageFiller from "../../components/PageFiller";
 import { Typography } from "@mui/material";
 import Chip from "../../components/Chips/Chip";
 import MultipleMinimalAccordion from "../../components/Accordions/MultipleMinimalAccordion";
+import { useContext } from "react";
+import MobileExperience from "../../contexts/MobileExperience";
 
 interface RepeatingContentProps {
   title: string;
@@ -46,13 +48,19 @@ const RepeatingContent: React.FC<RepeatingContentProps> = ({
 };
 
 const Experience: React.FC = () => {
+  const mobileExperience = useContext(MobileExperience);
+
   return (
     <FlexBox
       justifyContent="center"
       style={{ animation: "fadeIn 1s forwards" }}
     >
-      <PageFiller heightFill="25vh" />
-      <SectionDivider text="Experiences & Awards" width="65%" />
+      {!mobileExperience && <PageFiller heightFill="25vh" />}
+      {mobileExperience && <PageFiller heightFill="10vh" />}
+      <SectionDivider
+        text="Experiences & Awards"
+        width={mobileExperience ? "98%" : "65%"}
+      />
 
       <Typography
         color="var(--secondary-accordion-border-light)"
@@ -64,7 +72,7 @@ const Experience: React.FC = () => {
         cybersecurity; (click to expand details).
       </Typography>
       <FlexBox
-        width="65%"
+        width={mobileExperience ? "98%" : "65%"}
         margin="0 auto"
         flexWrap="wrap"
         flexDirection="row"
@@ -248,7 +256,7 @@ const Experience: React.FC = () => {
           ]}
         />
       </FlexBox>
-      <PageFiller heightFill="1vh" />
+      <PageFiller heightFill="5vh" />
     </FlexBox>
   );
 };

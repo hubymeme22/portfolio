@@ -7,6 +7,7 @@
   --secondary-light: #606060;
   --secondary-accordion-border-light: #4d4d4d;
   --shadow-light: #c8c8c8;
+  --direction-button: #c8c8c88f;
 }
 
 * {
@@ -27,7 +28,9 @@ header {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
+  background-color: white;
+
   height: 2em;
   width: 100%;
   display: flex;
@@ -120,4 +123,30 @@ a {
   font-family: "Roboto Condensed", "Helvetica", "Arial", sans-serif;
   font-weight: bold;
   font-size: 20pt;
+}
+
+/*
+* Just CSS helper for mobile experience
+*/
+
+@media only screen and (max-width: 1468px) {
+  * {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 12pt;
+  }
+
+  .bigHeader {
+    font-weight: bold;
+    font-family: "Roboto Condensed", "Helvetica", "Arial", sans-serif;
+    font-size: 60pt;
+    margin: 0;
+    animation: fadeInHeader 1s forwards;
+  }
+
+  .subtitleHeader {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 11pt;
+    margin: 0;
+    animation: fadeInHeader 1s forwards;
+  }
 }

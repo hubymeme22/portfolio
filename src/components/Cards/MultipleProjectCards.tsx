@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 const MultipleProjectCards: React.FC<MultipleProjectCardsProps> = ({
   data,
   enableTransitionEffect,
+  isMobile,
 }) => {
   return data.length > 0 ? (
     data.map((project, id) => {
@@ -11,6 +12,7 @@ const MultipleProjectCards: React.FC<MultipleProjectCardsProps> = ({
       return (
         <ProjectCard
           key={id}
+          isMobile={isMobile}
           iconType={project.iconType}
           summaryContent={project.summaryContent}
           title={project.title}

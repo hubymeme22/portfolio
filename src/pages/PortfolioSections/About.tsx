@@ -1,31 +1,48 @@
-import { Box } from "@mui/material";
 import SectionDivider from "../../components/SectionDivider";
 import FlexBox from "../../components/FlexBox";
 import PageFiller from "../../components/PageFiller";
+import { useContext } from "react";
+import MobileExperience from "../../contexts/MobileExperience";
 
 const About: React.FC = () => {
+  const mobileExperience = useContext(MobileExperience);
+
   return (
     <FlexBox
       height="100%"
       justifyContent="center"
       style={{ animation: "fadeIn 1s forwards" }}
     >
-      <SectionDivider text="About Me" width="65%" />
-      <Box display="flex" width="100%" marginTop="3vh" justifyContent="center">
-        <Box display="flex" width="65%" gap="3em">
-          <Box display="flex" justifyContent="center">
+      <SectionDivider
+        text="About Me"
+        width={mobileExperience ? "95%" : "65%"}
+      />
+      <FlexBox
+        display="flex"
+        width="100%"
+        marginTop="3vh"
+        justifyContent="center"
+      >
+        <FlexBox
+          margin="auto"
+          width={mobileExperience ? "95%" : "65%"}
+          flexDirection={mobileExperience ? "column" : "row"}
+          alignItems="center"
+          gap="2em"
+        >
+          <FlexBox justifyContent="center">
             <img
               src="/profile.jpeg"
-              height="300px"
-              width="300px"
+              height={mobileExperience ? "220px" : "300px"}
+              width={mobileExperience ? "220px" : "300px"}
               style={{
                 border: "none",
                 borderRadius: "50%",
                 boxShadow: "0 2px 10px 2px var(--shadow-light)",
               }}
             />
-          </Box>
-          <Box display="flex" textAlign="justify" alignItems="center">
+          </FlexBox>
+          <FlexBox textAlign="justify" alignItems="center">
             Hi! I'm Hubert Espinola, a recent graduate with a BS in Computer
             Science from Batangas State University. I'm a developer focused on
             cybersecurity and API development. I've worked on various projects
@@ -39,10 +56,9 @@ const About: React.FC = () => {
             articles and join forums to find new ideas and understand possible
             security issues, so I can tackle challenges in every project I work
             on.
-          </Box>
-        </Box>
-      </Box>
-      <PageFiller heightFill="15vh" />
+          </FlexBox>
+        </FlexBox>
+      </FlexBox>
     </FlexBox>
   );
 };

@@ -7,8 +7,9 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ImageCarousel from "../ImageCarousel";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { MinimalAccordionProps } from "../../interfaces/props";
+import MobileExperience from "../../contexts/MobileExperience";
 
 const MinimalAccordion: React.FC<MinimalAccordionProps> = ({
   imageSlide,
@@ -18,6 +19,7 @@ const MinimalAccordion: React.FC<MinimalAccordionProps> = ({
   style,
   title,
 }) => {
+  const mobileExperience = useContext(MobileExperience);
   const [images, _] = useState(imageSlide ?? []);
 
   return (
@@ -29,7 +31,7 @@ const MinimalAccordion: React.FC<MinimalAccordionProps> = ({
           boxShadow: "none",
           borderTop: "1px solid var(--secondary-accordion-border-light)",
           borderBottom: "1px solid var(--secondary-accordion-border-light)",
-          width: "31.5vw",
+          width: mobileExperience ? "100%" : "31.5vw",
         }}
       >
         {/* Title and subtitle */}

@@ -8,6 +8,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   githubLink,
   mergeReqLink,
+  isMobile,
   style,
 }) => {
   return (
@@ -15,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       style={style}
       sx={{
         height: "330px",
-        width: "350px",
+        width: isMobile ? "95%" : "350px",
         border: "1px solid black",
         cursor: "pointer",
         transition: "0.3s",

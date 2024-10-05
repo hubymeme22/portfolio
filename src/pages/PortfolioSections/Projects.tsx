@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MenuButton from "../../components/Buttons/MenuButton";
 import FlexBox from "../../components/FlexBox";
 import PageFiller from "../../components/PageFiller";
 import SectionDivider from "../../components/SectionDivider";
 import MultipleProjectCards from "../../components/Cards/MultipleProjectCards";
 import { ProjectCardProps } from "../../interfaces/props";
+import MobileExperience from "../../contexts/MobileExperience";
 
 const Projects: React.FC = () => {
   const [selectedPage, setSelectedPage] = useState(0);
+  const mobileExperience = useContext(MobileExperience);
 
   const cybersecPageContents: ProjectCardProps[] = [
     {
@@ -159,23 +161,25 @@ const Projects: React.FC = () => {
       justifyContent="center"
       style={{ animation: "fadeIn 1s forwards" }}
     >
-      <PageFiller heightFill="15vh" />
-      <SectionDivider text="Projects" width="75%" />
+      <PageFiller heightFill={mobileExperience ? "10vh" : "15vh"} />
+      <SectionDivider
+        text="Projects"
+        width={mobileExperience ? "98%" : "75%"}
+      />
       <PageFiller heightFill="4vh" />
-
       <FlexBox
         justifyContent="space-around"
         alignItems="center"
         flexDirection="row"
-        width="75%"
+        width={mobileExperience ? "98%" : "75%"}
         margin="auto"
-        gap="2em"
+        gap="1em"
       >
         <MenuButton
           active={selectedPage === 0}
-          label="Cybersecurity Tools"
+          label="Cybersecurity"
           style={{
-            fontSize: "15pt",
+            fontSize: mobileExperience ? "12pt" : "15pt",
             fontWeight: "bold",
           }}
           onClick={() => {
@@ -184,9 +188,9 @@ const Projects: React.FC = () => {
         />
         <MenuButton
           active={selectedPage === 1}
-          label="Backend Systems"
+          label="Backend"
           style={{
-            fontSize: "15pt",
+            fontSize: mobileExperience ? "12pt" : "15pt",
             fontWeight: "bold",
           }}
           onClick={() => {
@@ -195,9 +199,9 @@ const Projects: React.FC = () => {
         />
         <MenuButton
           active={selectedPage === 2}
-          label="Random Projects"
+          label="Random"
           style={{
-            fontSize: "15pt",
+            fontSize: mobileExperience ? "12pt" : "15pt",
             fontWeight: "bold",
           }}
           onClick={() => {
@@ -209,7 +213,7 @@ const Projects: React.FC = () => {
         justifyContent="center"
         alignItems="center"
         flexDirection="row"
-        width="75%"
+        width={mobileExperience ? "95%" : "75%"}
         margin="auto"
         gap="2em"
         marginTop="2em"
@@ -217,18 +221,21 @@ const Projects: React.FC = () => {
       >
         {selectedPage === 0 && (
           <MultipleProjectCards
+            isMobile={mobileExperience}
             data={cybersecPageContents}
             enableTransitionEffect
           />
         )}
         {selectedPage === 1 && (
           <MultipleProjectCards
+            isMobile={mobileExperience}
             data={backendSystemPageContent}
             enableTransitionEffect
           />
         )}
         {selectedPage === 2 && (
           <MultipleProjectCards
+            isMobile={mobileExperience}
             data={randomProjectPageContent}
             enableTransitionEffect
           />

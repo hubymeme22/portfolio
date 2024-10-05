@@ -4,8 +4,7 @@ import Header from "./templates/Header";
 import { useEffect, useState } from "react";
 import PageInstruct from "../components/Texts/PageInstruct";
 import Footer from "./templates/Footer";
-import BigHeaderSubtitle from "../components/Texts/BigHeaderSubtitle";
-import FlexBox from "../components/FlexBox";
+import MobileExperience from "../contexts/MobileExperience";
 
 const PAGE_LAST = 2;
 const PAGES_WITH_SCROLL_DISABLED = [2, 3];
@@ -16,7 +15,7 @@ const Layout: React.FC = () => {
   const desktopMedia = useMediaQuery("(min-width:1468px)");
 
   const checkScrollDisabled = () => {
-    return PAGES_WITH_SCROLL_DISABLED.includes(page);
+    return desktopMedia ? PAGES_WITH_SCROLL_DISABLED.includes(page) : true;
   };
 
   const directionCheck = (ev: WheelEvent) => {
@@ -43,36 +42,21 @@ const Layout: React.FC = () => {
   }, [scrollDirection]);
 
   return (
-    <Box
-      sx={{
-        height: "calc(100% - 2em)",
-        width: "100%",
-        top: 0,
-        left: 0,
-      }}
-    >
-      {desktopMedia ? (
-        <>
-          <Header page={page} setPage={setPage} />
-          <PageInstruct hidden={page !== 0} text="[ Scroll me ]" />
-          <Portfolio
-            page={page}
-            scrollDisabled={checkScrollDisabled()}
-            setPage={setPage}
-          />
-        </>
-      ) : (
-        <FlexBox
-          height="100vh"
-          width="100%"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <BigHeaderSubtitle label="Mobile experience is currently not supported :((" />
-        </FlexBox>
-      )}
-      <Footer />
-    </Box>
+    <MobileExperience.Provider value={!desktopMedia}>
+      <Box height="calc(100% - 2em)" width="100%" top="0" left="0">
+        <Header page={page} setPage={setPage} />
+        <PageInstruct
+          hidden={page !== 0 || !desktopMedia}
+          text="[ Scroll me ]"
+        />
+        <Portfolio
+          page={page}
+          scrollDisabled={checkScrollDisabled()}
+          setPage={setPage}
+        />
+        <Footer />
+      </Box>
+    </MobileExperience.Provider>
   );
 };
 

@@ -1,7 +1,11 @@
 import { Box } from "@mui/material";
 import MenuButton from "../../components/Buttons/MenuButton";
+import { useContext } from "react";
+import MobileExperience from "../../contexts/MobileExperience";
 
 const Footer: React.FC = () => {
+  const mobileExperience = useContext(MobileExperience);
+
   return (
     <footer>
       <Box
@@ -12,9 +16,11 @@ const Footer: React.FC = () => {
         display="flex"
         justifyContent="space-between"
       >
-        <Box sx={{ fontSize: "11pt" }}>
-          HueHueberry © 2024 | Coded with huehueberistic design 👽
-        </Box>
+        {!mobileExperience && (
+          <Box sx={{ fontSize: "11pt" }}>
+            HueHueberry © 2024 | Coded with huehueberistic design 👽
+          </Box>
+        )}
         <Box display="flex" gap="2em" justifyContent="flex-end">
           <MenuButton
             to="https://linkedin.com/in/huehueberry/"
@@ -28,7 +34,7 @@ const Footer: React.FC = () => {
           />
           <MenuButton
             to="https://x.com/thekrazyuno"
-            label="Twitter (X)"
+            label="Twitter"
             style={{ fontSize: "11pt" }}
           />
           <MenuButton
